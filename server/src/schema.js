@@ -5,6 +5,7 @@ const typeDefs = gql`
     "Query to get tracks array for the homepage grid"
     tracksForHome: [Track!]!
     track(id: ID!): Track
+    module(id: ID!): Module
   }
 
   "A track is a group of Modules that teaches about a specific topic"
@@ -41,6 +42,8 @@ const typeDefs = gql`
     title: String!
     "The Module's length in minutes"
     length: Int
+    videoUrl: String!
+    content: String!
 }
 `;
 
